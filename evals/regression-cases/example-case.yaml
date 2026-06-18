@@ -1,0 +1,29 @@
+# 회귀 평가 사례 예시
+# Skill 변경 시 이 사례들이 여전히 통과하는지 확인한다.
+
+id: regression-001
+description: "시장 분석 보고서 작성 — 기본 흐름 검증"
+skill_under_test: "run-project"
+
+input:
+  project_brief: "examples/project-brief.json"
+  mock_episodes:
+    - "brain/episodes/EP-001-market-analysis-example.md"
+
+expected_outputs:
+  execution_plan:
+    must_have:
+      - tasks 배열이 비어 있지 않아야 한다
+      - 각 task에 id와 description이 있어야 한다
+  evaluation:
+    must_have:
+      - verdict가 pass, revise, fail 중 하나
+      - scores 객체가 존재
+      - findings 배열이 존재
+  episode:
+    must_have:
+      - outcome 필드 존재
+      - keyLearnings 배열이 비어 있지 않아야 한다
+      - sourceReferenceIds 배열이 비어 있지 않아야 한다
+
+pass_condition: "모든 must_have 조건을 만족해야 한다"

@@ -1,0 +1,26 @@
+# 회사 A 데이터 보존 정책
+
+version: "1.0"
+
+retention:
+  project_episodes:
+    retain_for: permanent
+    review_after: "2년"
+  execution_plans:
+    retain_for: "3년"
+  evaluations:
+    retain_for: "3년"
+  skill_proposals:
+    retain_for: permanent
+    note: "승인 이력 추적을 위해 영구 보존"
+  runtime_outputs:
+    retain_for: "30일"
+    location: runtime/outputs
+    git_excluded: true
+
+deletion:
+  requires_approval: true
+  approver: "운영 책임자"
+  prohibited:
+    - deleting_approved_episodes
+    - deleting_skill_change_history

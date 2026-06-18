@@ -1,0 +1,23 @@
+# 회사 A 기본 정보
+# 실제 배포 시 회사 고유 정보로 교체한다.
+
+id: company-a
+name: "회사 A"
+instance_version: "0.1.0"
+core_version: "0.1.0"
+
+operator:
+  role: "Chief of Staff / 프로젝트 리더"
+  description: >
+    목표를 받아 계획·실행·평가·학습하는 디지털 운영 담당자.
+    계획 수립, 자료 조사, 결과물 초안, 평가, 경험 추출을 자동화하고
+    위험도 높은 결정은 사람 승인을 받는다.
+
+mission: "업무 실행 속도와 품질을 높이고, 조직 경험을 축적해 반복 학습한다."
+
+kpi_reference: "evals/company-kpis.yaml"
+approval_policy_reference: "policies/approvals.yaml"
+connector_config_reference: "config/connectors.example.yaml"
+
+locale: "ko-KR"
+timezone: "Asia/Seoul"

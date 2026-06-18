@@ -1,0 +1,22 @@
+# 회사 A 리스크 정책
+
+version: "1.0"
+
+risk_levels:
+  low:
+    description: "내부 초안, 읽기 전용 작업"
+    action: auto
+  medium:
+    description: "내부 공유, 설정 변경"
+    action: notify_then_proceed
+  high:
+    description: "외부 공유, 데이터 삭제, Skill 변경"
+    action: require_approval
+  critical:
+    description: "계약, 비용 집행, 법적 문서"
+    action: require_approval_and_legal_review
+
+escalation:
+  pending_decisions_threshold: 3
+  escalate_to: "운영 책임자"
+  escalation_channel: "직접 대화 (Slack, 이메일 자동 발송 금지)"

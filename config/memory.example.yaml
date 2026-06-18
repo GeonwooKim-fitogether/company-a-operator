@@ -1,0 +1,16 @@
+# GBrain 메모리 설정 예시
+# GBrain 공식 인터페이스 확인 후 실제 값으로 교체한다.
+
+memory:
+  backend: supabase                # supabase | local
+  # supabase_url: ${SUPABASE_URL}
+  # supabase_key: ${SUPABASE_ANON_KEY}
+
+  episode_retrieval:
+    max_results: 5
+    similarity_threshold: 0.7
+    # 실제 구현 시 임베딩 API 비용과 데이터 전송 경로를 먼저 문서화한다.
+
+  episode_storage:
+    auto_save: false               # true이면 Episode를 자동 저장 — 현재 false (사람 검토 필요)
+    require_evaluation: true       # Episode 저장 전 Evaluation 필수

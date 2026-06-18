@@ -1,0 +1,25 @@
+# Connector 설정 예시
+# 실제 값은 .env에서 환경변수로 주입한다.
+
+gbrain:
+  adapter: mock                    # mock | supabase | gbrain-api
+  # api_url: ${GBRAIN_API_URL}
+  # api_key: ${GBRAIN_API_KEY}
+  company_id: ${COMPANY_ID}
+  episode_table: episodes
+  decision_table: decisions
+
+google_drive:
+  adapter: mock                    # mock | oauth
+  # client_id: ${GOOGLE_OAUTH_CLIENT_ID}
+  # client_secret: ${GOOGLE_OAUTH_CLIENT_SECRET}
+  # refresh_token: ${GOOGLE_OAUTH_REFRESH_TOKEN}
+  access: read-only
+  approved_folders:
+    # - id: ${GOOGLE_DRIVE_ROOT_FOLDER_ID}
+    #   name: "회사 A 공유 드라이브"
+
+runtime:
+  output_dir: runtime/outputs
+  log_level: info                  # debug | info | warn | error
+  use_mock_adapters: true          # Phase 1 기본값
