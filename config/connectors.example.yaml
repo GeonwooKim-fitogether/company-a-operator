@@ -1,25 +1,54 @@
 # Connector 설정 예시
 # 실제 값은 .env에서 환경변수로 주입한다.
+# .env 파일을 절대 커밋하지 않는다 (.gitignore 참고)
 
+# ─────────────────────────────────────────
+# GBrain 설정
+# ─────────────────────────────────────────
 gbrain:
-  adapter: mock                    # mock | supabase | gbrain-api
-  # api_url: ${GBRAIN_API_URL}
-  # api_key: ${GBRAIN_API_KEY}
-  company_id: ${COMPANY_ID}
-  episode_table: episodes
-  decision_table: decisions
+  # Phase 1 (기본): mock 어댑터 사용
+  adapter: mock                    # mock | gbrain-mcp
 
+  # Phase 2 (실제 연결): gbrain-mcp로 전환
+  # adapter: gbrain-mcp
+  # mcp_url: ${GBRAIN_MCP_URL}      # gbrain serve --http 엔드포인트
+  # token: ${GBRAIN_TOKEN}          # OAuth 토큰 — .env에서만 설정
+
+  company_id: ${COMPANY_ID}
+
+  # 임베딩 제공자 설정 (Phase 2)
+  # 결정 근거: docs/embedding-provider-decision.md
+  # 기본값: Ollama 로컬 (외부 전송 없음)
+  # embedding:
+  #   provider: ollama              # ollama | openai | voyage (외부 = 사람 승인 필요)
+  #   model: nomic-embed-text
+  #   base_url: http://localhost:11434
+  #
+  # 외부 제공자 사용 시 (사람 승인 후):
+  # embedding:
+  #   provider: openai
+  #   model: text-embedding-3-small
+  #   api_key: ${OPENAI_API_KEY}    # .env에서만 설정
+
+# ─────────────────────────────────────────
+# Google Drive 설정
+# ─────────────────────────────────────────
 google_drive:
   adapter: mock                    # mock | oauth
+  # adapter: oauth
   # client_id: ${GOOGLE_OAUTH_CLIENT_ID}
   # client_secret: ${GOOGLE_OAUTH_CLIENT_SECRET}
   # refresh_token: ${GOOGLE_OAUTH_REFRESH_TOKEN}
-  access: read-only
+  access: read-only                # 쓰기 금지 — data-access.yaml
   approved_folders:
     # - id: ${GOOGLE_DRIVE_ROOT_FOLDER_ID}
     #   name: "회사 A 공유 드라이브"
+    #   recursive: false           # 승인된 폴더만, 하위 폴더 자동 접근 금지
 
+# ─────────────────────────────────────────
+# 런타임 설정
+# ─────────────────────────────────────────
 runtime:
   output_dir: runtime/outputs
   log_level: info                  # debug | info | warn | error
-  use_mock_adapters: true          # Phase 1 기본값
+  use_mock_adapters: true          # Phase 1 기본값; Phase 2에서 false로 전환
