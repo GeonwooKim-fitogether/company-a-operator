@@ -1,0 +1,33 @@
+# 회사 A KPI 정의
+# 디지털 운영자의 성과를 측정하는 기준
+
+version: "1.0"
+
+kpis:
+  - id: episode-reuse-rate
+    name: "Episode 재사용률"
+    description: "새 프로젝트에서 과거 Episode를 실제로 참조한 비율"
+    target: ">= 50%"
+    measurement: "프로젝트 Episode에 relatedEpisodeIds 포함 여부"
+
+  - id: repeat-failure-rate
+    name: "동일 실패 반복률"
+    description: "이전에 기록된 실패 패턴이 새 프로젝트에서 반복된 비율"
+    target: "< 10%"
+    measurement: "Evaluation에서 known failure pattern 발견 시 기록"
+
+  - id: evaluation-pass-rate
+    name: "평가 통과율"
+    description: "첫 번째 Evaluation에서 Pass를 받은 프로젝트 비율"
+    target: ">= 70%"
+
+  - id: source-traceability
+    name: "출처 추적 가능률"
+    description: "결과물에 포함된 주요 사실 중 출처가 기록된 비율"
+    target: "100%"
+
+  - id: skill-proposal-quality
+    name: "Skill Proposal 채택률"
+    description: "생성된 Skill Proposal 중 사람이 승인한 비율"
+    target: ">= 30%"
+    note: "낮은 채택률은 Proposal 품질 또는 제안 기준 재검토 필요"

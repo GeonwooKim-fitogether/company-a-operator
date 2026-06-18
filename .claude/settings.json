@@ -1,0 +1,29 @@
+{
+  "description": "company-a-operator Claude Code 설정",
+  "permissions": {
+    "allow": [
+      "Read(brain/**)",
+      "Read(examples/**)",
+      "Read(evals/**)",
+      "Read(docs/**)",
+      "Read(config/**)",
+      "Read(adapters/**)",
+      "Read(scripts/**)",
+      "Write(runtime/**)",
+      "Bash(npm run *)",
+      "Bash(npx ts-node *)"
+    ],
+    "deny": [
+      "Write(.env)",
+      "Write(brain/episodes/**)",
+      "Write(policies/**)",
+      "Write(.claude/settings.json)"
+    ]
+  },
+  "notes": [
+    "brain/episodes/ 수정은 사람 검토 후 허용",
+    "policies/ 수정은 사람 승인 필수",
+    ".env는 절대 생성하거나 읽지 않는다",
+    "runtime/은 Git 제외 폴더 — 임시 출력 저장 용도"
+  ]
+}

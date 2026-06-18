@@ -1,0 +1,17 @@
+{
+  "name": "company-a-operator",
+  "version": "0.1.0",
+  "description": "회사 A 디지털 운영자 인스턴스",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "tsx scripts/run-local.ts",
+    "validate": "tsx scripts/validate-config.ts",
+    "test": "tsx scripts/run-local.ts --assert"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0"
+  }
+}

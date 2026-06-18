@@ -1,0 +1,20 @@
+# Runtime 설정 예시
+
+runtime:
+  output_dir: runtime/outputs      # Git 제외
+  temp_dir: runtime/temp           # Git 제외
+  log_dir: runtime/logs            # Git 제외
+  log_level: info
+
+execution:
+  max_task_depth: 5                # 작업 분해 최대 깊이
+  require_source_for_claims: true  # 출처 없는 주장 경고
+  pending_decision_threshold: 3    # 미결 판단이 3개 초과 시 사람에게 에스컬레이션
+
+evaluation:
+  require_independent_evaluator: true   # Executor != Evaluator
+  auto_save_evaluation: false           # 평가 결과 자동 저장 여부
+
+skill_refine:
+  auto_apply: false                # Skill 자동 적용 금지 — 반드시 false
+  proposal_only: true              # 제안 파일만 생성

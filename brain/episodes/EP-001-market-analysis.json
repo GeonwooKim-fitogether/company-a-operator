@@ -1,0 +1,42 @@
+{
+  "id": "EP-001",
+  "projectId": "PROJ-2025-014",
+  "companyId": "company-a",
+  "title": "경쟁사 웨어러블 시장 진입 사례 분석",
+  "objective": "경쟁사 시장 진입 사례를 분석해 자사 전략 시사점을 도출",
+  "outcome": "partial",
+  "outcomeDetails": "시장 분석은 충실했으나 고객 관점 누락으로 제품 적합성을 과대평가함",
+  "whatWorked": [
+    "시장 보고서와 자사 라인업을 교차 분석한 구조",
+    "결론 이전에 출처를 명시해 검토 시간 단축"
+  ],
+  "whatFailed": [
+    "고객 피드백을 초기에 확인하지 않음",
+    "시장 규모만 보고 제품 적합성 과대평가"
+  ],
+  "rootCauses": [
+    "시장 데이터 우선 접근, 고객 관점 누락"
+  ],
+  "falseAssumptions": [
+    "시장이 크면 자사 제품도 수용될 것이라고 가정"
+  ],
+  "keyLearnings": [
+    "시장 분석은 시장 규모·경쟁사·고객 피드백을 모두 초기 단계에 포함해야 한다",
+    "시장 규모만으로 제품 적합성을 판단하면 과대평가 위험이 있다"
+  ],
+  "reusablePatterns": [
+    "시장·경쟁사·고객 3각 교차 검토 프레임워크",
+    "결론 전 출처 명시로 검토 시간 단축"
+  ],
+  "knowledgeGaps": [
+    "고객 세그먼트별 가격 민감도 데이터 부족"
+  ],
+  "followUpTasks": [
+    "고객 세그먼트별 가격 민감도 조사"
+  ],
+  "companySpecific": false,
+  "sourceReferenceIds": ["DRIVE-001", "DRIVE-002"],
+  "evaluationId": "EVAL-PROJ-2025-014",
+  "executionPlanId": "PLAN-PROJ-2025-014",
+  "createdAt": "2025-11-20T00:00:00Z"
+}

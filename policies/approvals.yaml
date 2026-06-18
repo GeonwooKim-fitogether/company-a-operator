@@ -1,0 +1,21 @@
+# 회사 A 승인 정책
+# Core 승인 정책(../digital-operator-core/policies/approval-policy.yaml)을 상속하고
+# 회사 A 전용 규칙을 추가한다.
+
+version: "1.0"
+inherits_from: "../digital-operator-core/policies/approval-policy.yaml"
+
+company_a_additions:
+  requires_approval:
+    - id: publish-report
+      description: "외부에 보고서 공개"
+      risk: high
+      approver: "CEO 또는 지정 담당자"
+    - id: update-company-kpi
+      description: "회사 KPI 기준 변경"
+      risk: medium
+      approver: "운영 책임자"
+    - id: add-drive-folder
+      description: "새 Google Drive 폴더를 승인 목록에 추가"
+      risk: medium
+      approver: "IT 관리자"

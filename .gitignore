@@ -1,0 +1,35 @@
+# 런타임 실행 파일 (Git 제외)
+runtime/
+
+# 환경 변수 및 인증정보
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Node.js
+node_modules/
+dist/
+build/
+.cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/settings.json
+*.swp
+
+# 테스트 결과
+coverage/
+.nyc_output/
+
+# 민감한 실행 결과
+runtime/outputs/
+runtime/cache/
