@@ -1,0 +1,44 @@
+[
+  {
+    "id": "DRIVE-001",
+    "type": "google-drive",
+    "title": "2025 국내 웨어러블 시장 현황 보고서",
+    "driveFileId": "mock-file-001",
+    "driveUrl": "https://drive.google.com/file/d/mock-file-001/view",
+    "mimeType": "application/vnd.google-apps.document",
+    "modifiedAt": "2026-03-15T09:00:00Z",
+    "author": "시장조사팀",
+    "retrievedAt": "2026-06-18T00:00:00Z",
+    "relevanceSummary": "국내 웨어러블 시장 규모와 주요 플레이어 분석",
+    "contentPreview": "[합성 데이터] 2025년 국내 웨어러블 시장은 전년 대비 12% 성장했으며, 주요 플레이어는 A사(35%), B사(22%), C사(15%)로 나타났다. 스마트워치 카테고리가 성장을 주도했다.",
+    "keywords": ["웨어러블", "시장", "시장분석", "플레이어", "스마트워치"]
+  },
+  {
+    "id": "DRIVE-002",
+    "type": "google-drive",
+    "title": "자사 제품 라인업 요약",
+    "driveFileId": "mock-file-002",
+    "driveUrl": "https://drive.google.com/file/d/mock-file-002/view",
+    "mimeType": "application/vnd.google-apps.spreadsheet",
+    "modifiedAt": "2026-05-01T10:30:00Z",
+    "author": "제품기획팀",
+    "retrievedAt": "2026-06-18T00:00:00Z",
+    "relevanceSummary": "자사 웨어러블 제품 라인업과 가격대",
+    "contentPreview": "[합성 데이터] 자사 제품: 피트밴드(보급형), 피트워치(중간형), 피트워치 Pro(프리미엄). 가격대 3만~15만원.",
+    "keywords": ["제품", "라인업", "웨어러블", "가격", "자사"]
+  },
+  {
+    "id": "DRIVE-003",
+    "type": "google-drive",
+    "title": "Q1 고객 피드백 요약",
+    "driveFileId": "mock-file-003",
+    "driveUrl": "https://drive.google.com/file/d/mock-file-003/view",
+    "mimeType": "application/vnd.google-apps.document",
+    "modifiedAt": "2026-04-10T14:00:00Z",
+    "author": "CS팀",
+    "retrievedAt": "2026-06-18T00:00:00Z",
+    "relevanceSummary": "Q1 고객 피드백 주요 테마",
+    "contentPreview": "[합성 데이터] 고객은 배터리 수명과 앱 연동 안정성을 가장 중요하게 여긴다. 가격보다 정확도에 민감.",
+    "keywords": ["고객", "피드백", "배터리", "정확도", "앱"]
+  }
+]
